@@ -9,6 +9,11 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
+  #[Jerry]add two line for email, the same with photo app.
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'http://localhost:3000'}
+
+
   # Show full error reports.
   config.consider_all_requests_local = true
 
